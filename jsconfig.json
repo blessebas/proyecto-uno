@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@root/*": ["*"],
+      "@models/*": ["models/*"],
+      "@controllers/*": ["controllers/*"],
+      "@middlewares/*": ["middlewares/*"],
+      "@helpers/*": ["utils/*"],
+      "@utils/*": ["utils/*"],
+      "@routes/*": ["routes/*"],
+      "@views/*": ["views/*"],
+      "@public/*": ["public/*"],
+      "@config/*": ["config/*"],
+      "@seed/*": ["seed/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"]
+}

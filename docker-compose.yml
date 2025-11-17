@@ -1,0 +1,52 @@
+services:
+  app:
+    container_name: app-proyecto-uno
+    image: seysww/proyecto-uno
+    build: 
+      context: .
+      target: ${NODE_ENV}
+      dockerfile: Dockerfile
+    environment:
+      - NODE_ENV=development
+      - APP_PORT=${APP_PORT}
+      - DB_HOST=${DB_HOST}
+      - DB_PORT=${DB_PORT}
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    command: ["sh","-c","npm install --no-audit --no-fund && npm run dev"]
+    ports:
+      - "${APP_PORT}:${APP_PORT}"
+      - "${LIVERELOAD_PORT}:${LIVERELOAD_PORT}"
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  db:
+    container_name: db-proyecto-uno
+    image: mysql:8.0
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD} || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  db_data:
+    external: false
+  node_modules:
+    external: false

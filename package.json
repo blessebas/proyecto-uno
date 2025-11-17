@@ -1,0 +1,101 @@
+{
+  "name": "proyecto-uno",
+  "version": "0.0.0",
+  "description": "mvc project",
+  "homepage": "https://github.com/blessebas/proyecto-uno#readme",
+  "bugs": {
+    "url": "https://github.com/blessebas/proyecto-uno/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blessebas/proyecto-uno.git"
+  },
+  "license": "ISC",
+  "author": "sebastian yabiku",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "lint:ci": "eslint . --max-warnings 0 && prettier --check . && stylelint \"**/*.{css,scss}\"",
+    "build:css": "postcss \"src/styles/**/*.css\" --base src/styles --dir public/assets/styles",
+    "build:js": "webpack --mode production",
+    "build:assets": "npm run build:css && npm run build:js",
+    "stylelint": "stylelint \"**/*.{css,scss}\"",
+    "stylelint:fix": "stylelint \"**/*.{css,scss}\" --fix",
+    "release": "semantic-release",
+    "cz": "cz",
+    "dev:server": "node --env-file=.env server.js",
+    "css:watch": "postcss \"src/styles/**/*.css\" --base src/styles --dir public/assets/styles --watch",
+    "dev": "concurrently -n server,css -c green,cyan \"npm:dev:server\" \"npm:css:watch\"",
+    "dev:watch": "node --env-file=.env --watch server.js"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "20.1.0",
+    "@commitlint/config-conventional": "20.0.0",
+    "@eslint/js": "9.39.1",
+    "@semantic-release/changelog": "6.0.3",
+    "@semantic-release/commit-analyzer": "13.0.1",
+    "@semantic-release/git": "10.0.1",
+    "@semantic-release/github": "11.0.6",
+    "@semantic-release/npm": "12.0.2",
+    "@semantic-release/release-notes-generator": "14.1.0",
+    "commitizen": "^4.3.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "9.39.1",
+    "eslint-config-prettier": "10.1.8",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-n": "17.23.1",
+    "eslint-plugin-promise": "7.2.1",
+    "stylelint": "16.10.0",
+    "stylelint-order": "6.0.4",
+    "css-loader": "6.11.0",
+    "autoprefixer": "10.4.19",
+    "connect-livereload": "0.6.1",
+    "livereload": "0.9.3",
+    "mini-css-extract-plugin": "2.9.2",
+    "postcss": "8.4.47",
+    "postcss-loader": "8.1.1",
+    "postcss-cli": "11.0.0",
+    "concurrently": "9.1.2",
+    "tailwindcss": "3.4.15",
+    "webpack": "5.95.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-middleware": "7.4.2",
+    "webpack-hot-middleware": "2.26.1",
+    "globals": "16.5.0",
+    "husky": "9.1.7",
+    "lint-staged": "16.2.6",
+    "prettier": "3.6.2",
+    "semantic-release": "24.2.9"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
+  "_moduleAliases": {
+    "@root": ".",
+    "@models": "models",
+    "@controllers": "controllers",
+    "@middlewares": "middlewares",
+    "@helpers": "utils",
+    "@utils": "utils",
+    "@routes": "routes",
+    "@views": "views",
+    "@public": "public",
+    "@config": "config",
+    "@seed": "seed"
+  },
+  "dependencies": {
+    "ejs": "3.1.10",
+    "express": "5.1.0",
+    "express-ejs-layouts": "2.5.1",
+    "module-alias": "^2.2.3",
+    "mysql2": "3.15.3",
+    "sequelize": "6.37.7"
+  }
+}
