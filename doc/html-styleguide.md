@@ -10,8 +10,8 @@ Guía de estilos para escribir HTML claro, consistente y fácil de mantener. Inc
 
 Las clases seguirán la misma convención definida en la guía CSS:
 
-* **BEM** para estructura
-* **kebab-case** como formato
+- **BEM** para estructura
+- **kebab-case** como formato
 
 Ejemplos:
 
@@ -44,7 +44,7 @@ Usar **2 espacios** por nivel de anidación.
 <img src="photo.jpg" alt="Profile" />
 
 <!-- Incorrecto -->
-<img src="photo.jpg">
+<img src="photo.jpg" />
 ```
 
 ---
@@ -61,8 +61,8 @@ El orden de atributos será consistente para mejorar la lectura del markup.
 4. **Accesibilidad** → `aria-*`, `alt`, `title`
 5. **Estado** → `disabled`, `readonly`, `required`, etc.
 6. **Comportamiento (sin JS todavía)** → `href`, `src`, `for`
-7. **Eventos de JavaScript** → `onclick`, `onchange`, `oninput`, etc. *(evitar inline cuando sea posible)*
-8. **Styling** → `style` *(evitar cuando sea posible)*
+7. **Eventos de JavaScript** → `onclick`, `onchange`, `oninput`, etc. _(evitar inline cuando sea posible)_
+8. **Styling** → `style` _(evitar cuando sea posible)_
 
 ---
 
@@ -123,9 +123,7 @@ Los comentarios en HTML se usarán **solo cuando se requiera**, para marcar secc
 
 ```html
 <!-- Header principal -->
-<header class="header">
-  ...
-</header>
+<header class="header">...</header>
 ```
 
 ---
@@ -135,11 +133,7 @@ Los comentarios en HTML se usarán **solo cuando se requiera**, para marcar secc
 ```html
 <!-- Tarjeta de usuario -->
 <article class="user-card user-card--premium">
-  <img
-    class="user-card__avatar"
-    src="avatar.jpg"
-    alt="Foto del usuario"
-  />
+  <img class="user-card__avatar" src="avatar.jpg" alt="Foto del usuario" />
 
   <h2 class="user-card__name">Juan Pérez</h2>
 

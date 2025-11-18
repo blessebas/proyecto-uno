@@ -22,22 +22,28 @@ module.exports = [
     },
     rules: {
       'n/no-unsupported-features/es-syntax': 'off',
-      'eqeqeq': 'error',
+      eqeqeq: 'error',
       'no-var': 'error',
       'prefer-const': 'error',
-      'camelcase': ['error', { properties: 'never', ignoreDestructuring: true }],
+      camelcase: ['error', { properties: 'never', ignoreDestructuring: true }],
       'no-nested-ternary': 'error',
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      'max-len': ['warn', { code: 120, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreComments: true }],
+      'max-len': [
+        'warn',
+        { code: 120, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreComments: true },
+      ],
       'max-params': ['warn', 3],
       'max-depth': ['warn', 3],
-      'complexity': ['warn', 10],
+      complexity: ['warn', 10],
       'max-lines-per-function': ['warn', { max: 50, skipBlankLines: true, skipComments: true }],
-      'import/order': ['error', {
-        groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
-        'newlines-between': 'always',
-        alphabetize: { order: 'asc', caseInsensitive: true }
-      }],
+      'import/order': [
+        'error',
+        {
+          groups: [['builtin', 'external'], 'internal', ['parent', 'sibling', 'index']],
+          'newlines-between': 'always',
+          alphabetize: { order: 'asc', caseInsensitive: true },
+        },
+      ],
     },
   },
   prettier,

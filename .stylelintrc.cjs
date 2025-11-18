@@ -54,11 +54,24 @@ module.exports = {
         },
         {
           groupName: 'Other',
-          properties: ['cursor', 'pointer-events', 'transition', 'transform', 'animation', 'box-shadow'],
+          properties: [
+            'cursor',
+            'pointer-events',
+            'transition',
+            'transform',
+            'animation',
+            'box-shadow',
+          ],
         },
       ],
       { unspecified: 'ignore', severity: 'warning' },
     ],
   },
-  ignoreFiles: ['**/node_modules/**', '**/dist/**', '**/build/**', '**/coverage/**', 'CHANGELOG.md'],
+  ignoreFiles: [
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/build/**',
+    '**/coverage/**',
+    'CHANGELOG.md',
+  ],
 };

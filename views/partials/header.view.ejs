@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="header__bar">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="/" class="header__brand">
+          <span>POST</span>
+          <b class="header__brand-mark">BIT</b>
+        </a>
+      </div>
+      <div class="header__center">
+        <form action="/search" method="GET">
+          <div class="search">
+            <button type="submit" class="search__button">
+              <i class="icon iconoir-search"></i>
+            </button>
+            <input class="search__input" type="text" placeholder="Search..." name="q" />
+          </div>
+        </form>
+      </div>
+      <div class="header__right">
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li class="header__menu-item"><a href="/login" class="header__menu-link">Login</a></li>
+            <li class="header__menu-item">
+              <a href="/register" class="header__menu-link">Register</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <nav class="header__categories">
+    <div class="header__categories-inner">
+      <ul class="header__categories-list">
+        <li>
+          <a class="header__category-link header__category-link--active" href="/">ALL</a>
+        </li>
+        <li>
+          <a class="header__category-link" href="/javascript">Javascript</a>
+        </li>
+        <li>
+          <a class="header__category-link" href="/python">Python</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>

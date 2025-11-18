@@ -1,0 +1,40 @@
+<% const _redirectUrl=(typeof redirectUrl !=='undefined' ) ? redirectUrl : null; const _redirectDelay=(typeof
+  redirectDelay !=='undefined' ) ? redirectDelay : 3000; %>
+
+  <% if (_redirectUrl) { %>
+    <meta http-equiv="refresh" content="<%= _redirectDelay / 1000 %>;url=<%= _redirectUrl %>">
+    <% } %>
+
+      <div class="view view-messages pt-6">
+        <% if (typeof type !=='undefined' && type==='success' ) { %>
+          <div class="pl-4 p-4 border border-gray-200 shadow-md hover:shadow-lg rounded-sm">
+            <div class="flex gap-3">
+              <i class="text-lg icon iconoir-check-circle text-green-900"></i>
+              <div>
+                <h2 class="text-lg leading-none mb-3 text-green-900">
+                  <%= typeof message !=='undefined' ? message : '' %>
+                </h2>
+                <p class="text-sm text-gray-500 mt-2 leading-none">
+                  <%= typeof details !=='undefined' ? details : '' %>
+                </p>
+              </div>
+            </div>
+          </div>
+          <% } %>
+
+            <% if (typeof type !=='undefined' && type==='error' ) { %>
+              <div class="pl-4 p-4 border border-gray-200 shadow-md hover:shadow-lg rounded-sm">
+                <div class="flex gap-3">
+                  <i class="text-lg icon iconoir-xmark-circle text-red-900"></i>
+                  <div>
+                    <h2 class="text-lg leading-none mb-3 text-red-900">
+                      <%= typeof message !=='undefined' ? message : '' %>
+                    </h2>
+                    <p class="text-sm text-gray-500 mt-2 leading-none">
+                      <%= typeof details !=='undefined' ? details : '' %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <% } %>
+      </div>

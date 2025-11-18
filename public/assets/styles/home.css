@@ -1,7 +1,218 @@
-.view-home {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+/* ==========================
+   Home hero
+   ========================== */
+.home-hero {
+  padding-top: 5rem;
+  padding-bottom: 6rem;
+  text-align: center;
+
+  & .hero__title {
+    margin-left: auto;
+    margin-right: auto
+  }
+
+  & .hero__title {
+    margin-bottom: 1.5rem
+  }
+
+  & .hero__title {
+    max-width: 42rem
+  }
+
+  & .hero__title {
+    font-size: 4.5rem;
+    line-height: 1
+  }
+
+  & .hero__title {
+    font-weight: 700
+  }
+
+  & .hero__description {
+    margin: auto
+  }
+
+  & .hero__description {
+    max-width: 36rem
+  }
+
+  & .hero__description {
+    font-weight: 400
+  }
+
+  & .hero__description {
+    line-height: 2.25rem
+  }
+
+  & .hero__description {
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity, 1))
+  }
+}
+
+/* ==========================
+   Home section
+   ========================== */
+.home-section {
+  margin-bottom: 6rem;
+
+  & .home-section__title {
+    margin-bottom: 1.5rem
+  }
+
+  & .home-section__title {
+    display: flex
+  }
+
+  & .home-section__title {
+    align-items: center
+  }
+
+  & .home-section__title {
+    border-left-width: 4px
+  }
+
+  & .home-section__title {
+    padding-left: 0.75rem
+  }
+
+  & .home-section__title {
+    font-size: 1.5rem;
+    line-height: 2rem
+  }
+
+  & .home-section__title--sky {
+    --tw-border-opacity: 1;
+    border-color: rgb(14 165 233 / var(--tw-border-opacity, 1))
+  }
+
+  & .home-section__title--yellow {
+    --tw-border-opacity: 1;
+    border-color: rgb(234 179 8 / var(--tw-border-opacity, 1))
+  }
+
+  & .home-section__title--violet {
+    --tw-border-opacity: 1;
+    border-color: rgb(139 92 246 / var(--tw-border-opacity, 1))
+  }
+
+  & .home-section__title-link {
+    display: flex
+  }
+
+  & .home-section__title-link {
+    align-items: center
+  }
+
+  & .home-section__icon {
+    margin-right: 0.5rem
+  }
+
+  & .home-section__grid {
+    margin-bottom: 2rem
+  }
+
+  & .home-section__grid {
+    display: grid
+  }
+
+  & .home-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr))
+  }
+
+  & .home-section__grid {
+    gap: 1.5rem
+  }
+
+  @media (min-width: 768px) {
+    & .home-section__grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr))
+    }
+  }
+
+  &.home-categories {
+    & .home-categories__grid {
+      margin-bottom: 1.5rem
+    }
+    & .home-categories__grid {
+      display: grid
+    }
+    & .home-categories__grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+    & .home-categories__grid {
+      gap: 1.75rem
+    }
+    @media (min-width: 768px) {
+      & .home-categories__grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr))
+      }
+    }
+
+    & .home-categories__item {
+      border-radius: 0.125rem
+    }
+
+    & .home-categories__item {
+      --tw-bg-opacity: 1;
+      background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1))
+    }
+
+    & .home-categories__item {
+      padding: 1rem
+    }
+
+    & .home-categories__item {
+      text-align: center
+    }
+
+    & .home-categories__item {
+      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    & .home-categories__item {
+      --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+      --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+      box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)
+    }
+
+    & .home-categories__item {
+      --tw-ring-opacity: 1;
+      --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity, 1))
+    }
+
+    & .home-categories__item:hover {
+      --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+      --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+    }
+
+    & .home-categories__icon {
+      margin-bottom: 0.5rem
+    }
+
+    & .home-categories__icon {
+      font-size: 1.5rem;
+      line-height: 2rem
+    }
+
+    & .home-categories__label {
+      margin-bottom: 0.5rem
+    }
+
+    & .home-categories__label {
+      display: block
+    }
+
+    & .home-categories__label {
+      font-size: 1rem;
+      line-height: 1.5rem
+    }
+
+    & .home-categories__label {
+      line-height: 1
+    }
+  }
 }

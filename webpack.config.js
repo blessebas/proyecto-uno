@@ -7,9 +7,10 @@ module.exports = (env = {}) => {
 
   const entries = {};
   const contextDir = path.resolve(__dirname, 'src');
-  const withHMR = (entryPath) => (
-    isProduction ? [entryPath] : ['webpack-hot-middleware/client?reload=true&timeout=2000', entryPath]
-  );
+  const withHMR = (entryPath) =>
+    isProduction
+      ? [entryPath]
+      : ['webpack-hot-middleware/client?reload=true&timeout=2000', entryPath];
 
   // Recorrer src y agregar todas las entradas .js
   const walk = (dir) => {
@@ -36,6 +37,7 @@ module.exports = (env = {}) => {
     entry: entries,
     cache: isProduction ? false : { type: 'filesystem' },
     experiments: isProduction ? {} : { cacheUnaffected: true },
+    watchOptions: isProduction ? undefined : { poll: 1000, ignored: /node_modules/ },
     output: {
       path: path.resolve(__dirname, 'public'),
       publicPath: '/assets/',

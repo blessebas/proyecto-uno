@@ -12,10 +12,10 @@ Las variables deben describir claramente **qué representan**.
 
 **Reglas:**
 
-* Usar **camelCase**.
-* Ser **descriptivas**, nunca abreviadas sin necesidad.
-* Evitar nombres genéricos como `data`, `item`, `value`.
-* Usar sustantivos para variables.
+- Usar **camelCase**.
+- Ser **descriptivas**, nunca abreviadas sin necesidad.
+- Evitar nombres genéricos como `data`, `item`, `value`.
+- Usar sustantivos para variables.
 
 **Ejemplos correctos:**
 
@@ -42,10 +42,10 @@ Los nombres de funciones deben **predecir acciones**. Deben ser verbales y expre
 
 **Reglas:**
 
-* Usar **camelCase**.
-* Comenzar con un **verbo**.
-* Nombrar según la intención, no la implementación.
-* Una función = una acción.
+- Usar **camelCase**.
+- Comenzar con un **verbo**.
+- Nombrar según la intención, no la implementación.
+- Una función = una acción.
 
 ### Convención para handlers de eventos
 
@@ -73,11 +73,11 @@ Para peticiones a APIs u operaciones de negocio **no se usa `handle`**.
 
 Usar verbos que describan la acción:
 
-* `get` → obtener datos
-* `create` → crear un recurso
-* `update` → actualizar
-* `delete` → eliminar
-* `fetch` → traer datos externos
+- `get` → obtener datos
+- `create` → crear un recurso
+- `update` → actualizar
+- `delete` → eliminar
+- `fetch` → traer datos externos
 
 Ejemplos:
 
@@ -107,7 +107,7 @@ class ShoppingCart {}
 Usar **SCREAMING_SNAKE_CASE**.
 
 ```js
-const API_BASE_URL = "https://api.example.com";
+const API_BASE_URL = 'https://api.example.com';
 const MAX_ATTEMPTS = 3;
 ```
 
@@ -117,21 +117,21 @@ const MAX_ATTEMPTS = 3;
 
 ### 2.1. Indentación
 
-* 2 espacios.
+- 2 espacios.
 
 ### 2.2. Punto y coma
 
-* Siempre usar punto y coma `;`.
+- Siempre usar punto y coma `;`.
 
 ### 2.3. Líneas cortas
 
-* Mantener las líneas por debajo de 100–120 caracteres.
+- Mantener las líneas por debajo de 100–120 caracteres.
 
 ### 2.4. Imports y exports
 
-* Preferir exports nombrados; evitar `export default`.
-* Ordenar imports: node/builtin → terceros → internos; en cada grupo, alfabético.
-* Usar rutas absolutas con alias cuando estén definidos (ver `jsconfig.json`).
+- Preferir exports nombrados; evitar `export default`.
+- Ordenar imports: node/builtin → terceros → internos; en cada grupo, alfabético.
+- Usar rutas absolutas con alias cuando estén definidos (ver `jsconfig.json`).
 
 ---
 
@@ -157,12 +157,12 @@ function notifyUserByEmail(user) {}
 
 ### 3.2. Funciones puras
 
-* Evitar efectos secundarios cuando sea posible.
+- Evitar efectos secundarios cuando sea posible.
 
 ### 3.3. Parámetros
 
-* Máximo **3 parámetros**.
-* Si hay más, usar un **objeto**.
+- Máximo **3 parámetros**.
+- Si hay más, usar un **objeto**.
 
 ```js
 function createUser({ name, age, email }) {}
@@ -177,7 +177,7 @@ function createUser({ name, age, email }) {}
 ```js
 const user = {
   id: 1,
-  fullName: "Juan Pérez",
+  fullName: 'Juan Pérez',
   age: 30,
   isAdmin: false,
 };
@@ -220,9 +220,9 @@ Hace el código más limpio.
 
 ### 5.3. Igualdad y valores falsy
 
-* Usar `===`/`!==` siempre.
-* Usar `??` para defaults y `?.` para acceso seguro.
-* Definir explícitamente `null` vs `undefined` en APIs internas.
+- Usar `===`/`!==` siempre.
+- Usar `??` para defaults y `?.` para acceso seguro.
+- Definir explícitamente `null` vs `undefined` en APIs internas.
 
 ---
 
@@ -292,10 +292,10 @@ async function loadUserProfile(id) {
 ```js
 async function fetchData() {
   try {
-    const res = await fetch("/api");
+    const res = await fetch('/api');
     return await res.json();
   } catch (error) {
-    console.error("Error fetching data", error);
+    console.error('Error fetching data', error);
     throw error;
   }
 }
@@ -303,8 +303,8 @@ async function fetchData() {
 
 ### 7.3. Errores de dominio
 
-* Lanzar instancias de error con contexto (`name`, `code`, `cause`).
-* No lanzar strings.
+- Lanzar instancias de error con contexto (`name`, `code`, `cause`).
+- No lanzar strings.
 
 ---
 
@@ -323,30 +323,30 @@ async function fetchData() {
 
 ### 8.1. Inmutabilidad
 
-* No reasignar parámetros de funciones.
-* Preferir copias (`{...obj}`, `[...arr]`, `map/filter/reduce`).
+- No reasignar parámetros de funciones.
+- Preferir copias (`{...obj}`, `[...arr]`, `map/filter/reduce`).
 
 ### 8.2. Seguridad (Express/EJS)
 
-* Usar middlewares de seguridad (helmet, rate limiting) en prod.
-* No loguear secretos ni datos sensibles.
-* Mantener la lógica de vistas simple y escapar por defecto.
+- Usar middlewares de seguridad (helmet, rate limiting) en prod.
+- No loguear secretos ni datos sensibles.
+- Mantener la lógica de vistas simple y escapar por defecto.
 
 ### 8.3. Fechas e i18n
 
-* Trabajar en UTC por defecto.
-* Usar `Intl`/`date-fns` y evitar manipular fechas crudas.
+- Trabajar en UTC por defecto.
+- Usar `Intl`/`date-fns` y evitar manipular fechas crudas.
 
 ### 8.4. Testing
 
-* Estructura AAA (Arrange, Act, Assert).
-* Convención de nombres `*.test.js` y mocks aislados.
-* Cobertura mínima acordada por el equipo.
+- Estructura AAA (Arrange, Act, Assert).
+- Convención de nombres `*.test.js` y mocks aislados.
+- Cobertura mínima acordada por el equipo.
 
 ### 8.5. Tipado gradual
 
-* Mejorar JSDoc con `@typedef`/`@template` para contratos más claros.
-* Activar `checkJs` en `jsconfig.json` si se desea validación adicional sin migrar a TS.
+- Mejorar JSDoc con `@typedef`/`@template` para contratos más claros.
+- Activar `checkJs` en `jsconfig.json` si se desea validación adicional sin migrar a TS.
 
 ---
 
@@ -363,16 +363,16 @@ async function initializeUserPanel() {
 
 async function loadUser() {
   try {
-    const response = await fetch("/api/user");
+    const response = await fetch('/api/user');
     return response.json();
   } catch (error) {
-    console.error("Failed to load user", error);
+    console.error('Failed to load user', error);
     return null;
   }
 }
 
 function renderUserInfo(user) {
-  const userNameElement = document.getElementById("user-name");
+  const userNameElement = document.getElementById('user-name');
   userNameElement.textContent = user.fullName;
 }
 ```

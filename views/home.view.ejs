@@ -1,3 +1,158 @@
 <div class="view view-home">
-    <h1>HOMEPAGE TEST 243</h1>
+  <section class="home-hero">
+    <h1 class="hero__title">Discover, Share, and Connect.</h1>
+    <p class="hero__description">Join our community of like-minded individuals and start sharing your knowledge today.
+    </p>
+  </section>
+  <section class="home-section">
+    <h2 class="home-section__title home-section__title--sky">
+      <i class="icon iconoir-timer home-section__icon"></i>
+      Ultimas publicaciones
+    </h2>
+    <div class="home-section__grid">
+      <% for (let i=0; i < 4; i++) { %>
+        <div class="card">
+          <div class="card__header">
+            <button class="card__favorite" type="button" aria-label="Save as favorite">
+              <i class="icon iconoir-heart"></i>
+            </button>
+            <img class="card__image" src="https://picsum.photos/640/400?random=1" alt="The Future of Web Development" />
+          </div>
+          <div class="card__body">
+            <h2 class="card__title"><a href="/javascript/titulo-4-mhdr7eul">The Future of Web Development</a></h2>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet quisquam quos. Cupiditate
+              quisquam aperiam, mollitia vitae ducimus totam architecto sit minima ex autem, corporis iste ad temporibus
+              natus tempore!
+            </p>
+          </div>
+          <div class="card__foot">
+            <ul class="card__meta">
+              <li class="card__meta-avatar">
+                <img class="card__avatar" src="https://picsum.photos/32/32?random=11" alt="" />
+              </li>
+              <li class="card__meta-info">
+                <h3 class="card__author"><a href="/sebastian-yabiku/my-post">Sebastian Yabiku</a></h3>
+                <time class="card__date" datetime="30/10/2025">30/10/2025</time>
+              </li>
+              <li class="card__meta-comments">
+                <i class="icon iconoir-chat-bubble"></i>
+                <span class="card__comments-count">12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </section>
+  <section class="home-section">
+    <h2 class="home-section__title home-section__title--yellow">
+      <a class="home-section__title-link" href="/javascript">
+        <i class="icon iconoir-folder home-section__icon"></i>
+        Javascript
+      </a>
+    </h2>
+    <div class="home-section__grid">
+      <% for (let i=0; i < 4; i++) { %>
+        <div class="card">
+          <div class="card__header">
+            <button class="card__favorite" type="button" aria-label="Save as favorite">
+              <i class="icon iconoir-heart"></i>
+            </button>
+            <img class="card__image" src="https://picsum.photos/640/400?random=1" alt="The Future of Web Development" />
+          </div>
+          <div class="card__body">
+            <h2 class="card__title"><a href="/javascript/titulo-4-mhdr7eul">The Future of Web Development</a></h2>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet quisquam quos. Cupiditate
+              quisquam aperiam, mollitia vitae ducimus totam architecto sit minima ex autem, corporis iste ad temporibus
+              natus tempore!
+            </p>
+          </div>
+          <div class="card__foot">
+            <ul class="card__meta">
+              <li class="card__meta-avatar">
+                <img class="card__avatar" src="https://picsum.photos/32/32?random=11" alt="" />
+              </li>
+              <li class="card__meta-info">
+                <h3 class="card__author"><a href="/sebastian-yabiku/my-post">Sebastian Yabiku</a></h3>
+                <time class="card__date" datetime="30/10/2025">30/10/2025</time>
+              </li>
+              <li class="card__meta-comments">
+                <i class="icon iconoir-chat-bubble"></i>
+                <span class="card__comments-count">12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </section>
+  <section class="home-section">
+    <h2 class="home-section__title home-section__title--yellow">
+      <a class="home-section__title-link" href="/python">
+        <i class="icon iconoir-folder home-section__icon"></i>
+        Python
+      </a>
+    </h2>
+    <div class="home-section__grid">
+      <% for (let i=0; i < 4; i++) { %>
+        <div class="card">
+          <div class="card__header">
+            <button class="card__favorite" type="button" aria-label="Save as favorite">
+              <i class="icon iconoir-heart"></i>
+            </button>
+            <img class="card__image" src="https://picsum.photos/640/400?random=1" alt="The Future of Web Development" />
+          </div>
+          <div class="card__body">
+            <h2 class="card__title"><a href="/javascript/titulo-4-mhdr7eul">The Future of Web Development</a></h2>
+            <p class="card__description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur eveniet quisquam quos. Cupiditate
+              quisquam aperiam, mollitia vitae ducimus totam architecto sit minima ex autem, corporis iste ad temporibus
+              natus tempore!
+            </p>
+          </div>
+          <div class="card__foot">
+            <ul class="card__meta">
+              <li class="card__meta-avatar">
+                <img class="card__avatar" src="https://picsum.photos/32/32?random=11" alt="" />
+              </li>
+              <li class="card__meta-info">
+                <h3 class="card__author"><a href="/sebastian-yabiku/my-post">Sebastian Yabiku</a></h3>
+                <time class="card__date" datetime="30/10/2025">30/10/2025</time>
+              </li>
+              <li class="card__meta-comments">
+                <i class="icon iconoir-chat-bubble"></i>
+                <span class="card__comments-count">12</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <% } %>
+    </div>
+  </section>
+  <section class="home-section home-categories">
+    <h2 class="home-section__title home-section__title--violet">
+      <a class="home-section__title-link" href="/python">
+        <i class="icon iconoir-cube home-section__icon"></i>
+        Categorias
+      </a>
+    </h2>
+    <div class="home-categories__grid">
+      <a href="/javascript" class="home-categories__item">
+        <i class="icon iconoir-folder home-categories__icon"></i>
+        <span class="home-categories__label">Javascript</span>
+      </a>
+
+      <a href="/python" class="home-categories__item">
+        <i class="icon iconoir-folder home-categories__icon"></i>
+        <span class="home-categories__label">Python</span>
+      </a>
+    </div>
+  </section>
+
 </div>
+
+<%- contentFor('styles') %>
+  <link rel="stylesheet" href="/assets/styles/home.css" />
+  <link rel="stylesheet" href="/assets/styles/card.css" />

@@ -9,19 +9,19 @@ const setupDevServer = require('@root/config/dev-server.config');
 
 // setup dev server
 if (process.env.NODE_ENV === 'development') {
-    setupDevServer(app);
+  setupDevServer(app);
 }
 
 // connect to db
 (async () => {
-    try {
-        await db.authenticate();
-        await db.sync(); // sync models with database
-        console.log('DB connected');
-    } catch (err) {
-        console.log('Error Database Connection : ' + err);
-    }
-})()
+  try {
+    await db.authenticate();
+    await db.sync(); // sync models with database
+    console.log('DB connected');
+  } catch (err) {
+    console.log('Error Database Connection : ' + err);
+  }
+})();
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -42,5 +42,5 @@ app.use('/', publicRoutes);
 // init server
 const port = process.env.APP_PORT;
 app.listen(port, () => {
-    console.log('Server is running on port http://localhost:' + port);
+  console.log('Server is running on port http://localhost:' + port);
 });

@@ -2,7 +2,7 @@ services:
   app:
     container_name: app-proyecto-uno
     image: seysww/proyecto-uno
-    build: 
+    build:
       context: .
       target: ${NODE_ENV}
       dockerfile: Dockerfile
@@ -15,7 +15,7 @@ services:
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
     ports:
-      - "${APP_PORT}:${APP_PORT}"
+      - '${APP_PORT}:${APP_PORT}'
     depends_on:
       db:
         condition: service_healthy
@@ -30,11 +30,12 @@ services:
       - MYSQL_PASSWORD=${DB_PASSWORD}
       - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
     ports:
-      - "${DB_PORT}:3306"
+      - '${DB_PORT}:3306'
     volumes:
       - db_data:/var/lib/mysql
     healthcheck:
-      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD} || exit 1"]
+      test:
+        ['CMD-SHELL', 'mysqladmin ping -h localhost -u root -p$${MYSQL_ROOT_PASSWORD} || exit 1']
       interval: 10s
       timeout: 5s
       retries: 10

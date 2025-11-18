@@ -1,7 +1,67 @@
-.view-home {
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
+/* ==========================
+   Home hero
+   ========================== */
+.home-hero {
+  @apply text-center pt-20 pb-24;
+
+  & .hero__title {
+    @apply text-7xl max-w-2xl mx-auto mb-6 font-bold;
+  }
+
+  & .hero__description {
+    @apply max-w-xl m-auto leading-9 text-gray-500 font-normal;
+  }
+}
+
+/* ==========================
+   Home section
+   ========================== */
+.home-section {
+  @apply mb-24;
+
+  & .home-section__title {
+    @apply mb-6 flex items-center pl-3 text-2xl border-l-4;
+  }
+
+  & .home-section__title--sky {
+    @apply border-sky-500;
+  }
+
+  & .home-section__title--yellow {
+    @apply border-yellow-500;
+  }
+
+  & .home-section__title--violet {
+    @apply border-violet-500;
+  }
+
+  & .home-section__title-link {
+    @apply flex items-center;
+  }
+
+  & .home-section__icon {
+    @apply mr-2;
+  }
+
+  & .home-section__grid {
+    @apply grid grid-cols-2 gap-6 md:grid-cols-4 mb-8;
+  }
+
+  &.home-categories {
+    & .home-categories__grid {
+      @apply grid grid-cols-2 gap-7 mb-6 md:grid-cols-6;
+    }
+
+    & .home-categories__item {
+      @apply bg-neutral-50 rounded-sm ring-1 ring-gray-200 shadow-md hover:shadow-lg p-4 text-center;
+    }
+
+    & .home-categories__icon {
+      @apply mb-2 text-2xl;
+    }
+
+    & .home-categories__label {
+      @apply block text-base mb-2 leading-none;
+    }
+  }
 }

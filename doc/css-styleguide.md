@@ -22,15 +22,19 @@ Usar BEM para todas las clases CSS.
 **Ejemplo:**
 
 ```css
-.card {}
-.card__title {}
-.card__button {}
-.card__button--primary {}
+.card {
+}
+.card__title {
+}
+.card__button {
+}
+.card__button--primary {
+}
 ```
 
 ---
 
-### 1.2. Variables (CSS) 
+### 1.2. Variables (CSS)
 
 - Definir tokens con CSS Custom Properties (kebab-case):
 
@@ -41,8 +45,6 @@ Usar BEM para todas las clases CSS.
   --font-family-base: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
 }
 ```
-
-
 
 ---
 
@@ -135,8 +137,10 @@ Los comentarios se utilizarán **solo cuando se requiera**, para separar bloques
 ### ✔️ Mantener clases pequeñas y semánticas
 
 ```css
-.user-profile__avatar {}
-.user-profile__name {}
+.user-profile__avatar {
+}
+.user-profile__name {
+}
 ```
 
 ### ✔️ Evitar el sobre-anidado
@@ -153,19 +157,24 @@ Los comentarios se utilizarán **solo cuando se requiera**, para separar bloques
 ✔️ Bueno:
 
 ```css
-.card {}
-.card__header {}
-.card__title {}
+.card {
+}
+.card__header {
+}
+.card__title {
+}
 ```
 
 ### ✔️ Preferir clases BEM antes que selectores de etiqueta
 
 ```css
 /* Mejor */
-.button {}
+.button {
+}
 
 /* Evitar */
-button {}
+button {
+}
 ```
 
 ---
@@ -196,7 +205,7 @@ button {}
   font-family: var(--font-family-base);
 
   /* Other */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
   transition: transform 0.2s ease;
 }
 

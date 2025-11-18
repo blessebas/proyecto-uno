@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POSTBIT<% if (typeof title !=='undefined' && title) { %> - <%= title %>
+        <% } %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link rel="stylesheet" href="/assets/styles/main.css" />
+  <%- (typeof styles !=='undefined' ? styles : '' ) %>
+</head>
+
+<body>
+  <div class="app">
+    <header class="header">
+      <div class="header__bar">
+        <div class="header__inner">
+          <div class="header__left">
+            <a href="/" class="header__brand">
+              <span>POST</span>
+              <b class="header__brand-mark">BIT</b>
+            </a>
+          </div>
+          <div class="header__right">
+            <nav class="header__nav">
+              <ul class="header__menu">
+                <li class="header__menu-item"><a href="/login" class="header__menu-link">Login</a></li>
+                <li class="header__menu-item">
+                  <a href="/register" class="header__menu-link">Register</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="app__main main">
+      <div class="main__inner"><%- body %></div>
+    </main>
+    <%- include('../partials/footer.view.ejs') %>
+  </div>
+  <script src="/assets/scripts/main.js"></script>
+  <%- (typeof scripts !=='undefined' ? scripts : '' ) %>
+</body>
+
+</html>

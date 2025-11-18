@@ -2,19 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/styles/main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>POSTBIT<% if (typeof title !=='undefined' && title) { %> - <%= title %>
+        <% } %>
+  </title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link rel="stylesheet" href="/assets/styles/main.css" />
+  <%- (typeof styles !=='undefined' ? styles : '' ) %>
 </head>
 
 <body>
-    <div class="app">
-        <header>header</header>
-        <main><%- body %></main>
-        <footer>footer</footer>
-    </div>
-    <script src="/assets/scripts/main.js"></script>
+  <div class="app">
+    <%- include('../partials/header.view.ejs') %>
+      <main class="app__main main">
+        <div class="main__inner"><%- body %></div>
+      </main>
+      <%- include('../partials/footer.view.ejs') %>
+  </div>
+  <script src="/assets/scripts/main.js"></script>
+  <%- (typeof scripts !=='undefined' ? scripts : '' ) %>
 </body>
 
 </html>

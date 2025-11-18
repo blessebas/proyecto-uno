@@ -1,0 +1,64 @@
+/* ==========================
+   Card
+   ========================== */
+.card {
+  @apply relative bg-neutral-50 rounded-sm shadow-md hover:shadow-lg;
+
+  & .card__header {}
+
+  & .card__favorite {
+    @apply absolute top-2 right-2 w-8 h-8 rounded-full bg-white/80 backdrop-blur-sm flex items-center justify-center shadow-sm text-gray-700 hover:text-red-600 transition-all duration-200;
+  }
+
+  & .card__image {
+    @apply w-full h-40 object-cover rounded-t-md;
+  }
+
+  & .card__body {
+    @apply p-4;
+  }
+
+  & .card__title {
+    @apply text-xl mb-2 leading-none;
+  }
+
+  & .card__description {
+    @apply break-all text-sm text-gray-600 leading-6;
+  }
+
+  & .card__foot {
+    @apply p-4;
+  }
+
+  & .card__meta {
+    @apply flex items-center;
+  }
+
+  & .card__meta-info {
+    @apply leading-none;
+  }
+
+  & .card__meta-avatar {
+    @apply mr-2;
+  }
+
+  & .card__avatar {
+    @apply rounded-full w-[32px] h-[32px];
+  }
+
+  & .card__author {
+    @apply text-sm mb-1 leading-none;
+  }
+
+  & .card__date {
+    @apply text-gray-500 text-xs;
+  }
+
+  & .card__meta-comments {
+    @apply ml-auto flex items-center gap-1 text-gray-700;
+  }
+
+  & .card__comments-count {
+    @apply text-xs;
+  }
+}
